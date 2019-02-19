@@ -4,7 +4,7 @@ import random
 
 
 ###########################################################################
-## Class janela
+## Interface WX
 ###########################################################################
 
 class janela ( wx.Frame ):
@@ -115,9 +115,10 @@ class janela ( wx.Frame ):
 	def Tsobre( self, event ):
 		event.Skip()
 
-
-
-
+###########################################################################
+## Subclasse e Código base
+###########################################################################
+		
 class Teste():
     def testeplus(tam):
         tam=int(tam)
@@ -152,8 +153,6 @@ class janelaup(janela):
         wx.MessageBox("Desenvolvido por Marcos Aurélio","Sobre",wx.ICON_INFORMATION)
 
 if __name__ == '__main__':
-
-
     # When this module is run (not imported) then create the app, the
     # frame, show it, and start the event loop.
     app = wx.App("file.log")
