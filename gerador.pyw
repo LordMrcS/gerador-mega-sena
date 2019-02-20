@@ -147,7 +147,7 @@ class janelaup(janela):
             ni=ni-1
 
     def Tola( self, event ):
-        wx.MessageBox("??? Peido Mole ???","Msg",wx.ICON_ERROR)
+        wx.MessageBox("??? olá ???","Msg",wx.ICON_ERROR)
 
     def Tsobre( self, event ):
         wx.MessageBox("Desenvolvido por Marcos Aurélio","Sobre",wx.ICON_INFORMATION)
