@@ -50,7 +50,7 @@ class janela ( wx.Frame ):
 		fgSizer1.Add( self.limpa, 1, wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL|wx.RIGHT|wx.LEFT, 5 )
 
 
-		gSizer1.Add( fgSizer1, 1, wx.EXPAND|wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL|wx.RIGHT, 5 )
+		gSizer1.Add( fgSizer1, 1, wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_CENTER_VERTICAL|wx.RIGHT, 5 )
 
 
 		bSizer1.Add( gSizer1, 0, wx.EXPAND, 5 )
@@ -121,14 +121,19 @@ class janela ( wx.Frame ):
 		
 class Teste():
     def testeplus(tam):
-        tam=int(tam)
-        vetor = []
-        x=0
-        while(x<tam):
-            num = random.randint(1,99)
-            if (not vetor.count(num)):
-                vetor.append(num)
-                x=x+1
+        validos = [ "6","7","8","9","10","11","12","13","14","15" ]
+        if tam in validos:
+            tam=int(tam)
+            vetor = []
+            x=0
+            while(x<tam):
+                num = random.randint(1,99)
+                if (not vetor.count(num)):
+                    vetor.append(num)
+                    x=x+1
+        else:
+              wx.MessageBox("Selecione uma opção válida.","Msg",wx.ICON_ERROR)
+              return "Selecione uma opção válida."
         return vetor
 
 class janelaup(janela):
