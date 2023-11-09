@@ -127,7 +127,7 @@ class Teste():
             vetor = []
             x=0
             while(x<tam):
-                num = random.randint(1,99)
+                num = random.randint(1,60)
                 if (not vetor.count(num)):
                     vetor.append(num)
                     x=x+1
